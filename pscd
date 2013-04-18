@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    defaults read com.apple.screencapture
+else
+    defaults write com.apple.screencapture location $1
+fi
+
+# disable shadow
+#defaults write com.apple.screencapture disable-shadow -bool true
+#killall SystemUiServer
